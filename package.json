@@ -1,0 +1,11 @@
+{
+  "name": "gdawgdatingexperience",
+  "version": "1.0.0",
+  "description": "Sexiest Site Alive 2030",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index"
+  },
+  "author": "G-Dawg Fossner",
+  "license": "MIT"
+}
