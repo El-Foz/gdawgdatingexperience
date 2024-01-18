@@ -1,3 +1,4 @@
 .env
 node_modules
 hottie.db
+hottie.db-journal
