@@ -1,14 +1,14 @@
-const { Sequelize, DataTypes } = require("sequelize")
+const { Sequelize, DataTypes, Model } = require("sequelize")
 
 const sequelize = new Sequelize({
     dialect: 'sqlite',
-    storage: './hottie.db'
+    storage: './hottie.sqlite'
 });
 
 sequelize.authenticate()
 console.log('Connection has been established successfully.');
 
-const Gdawg=sequelize.define("GDAWG", {
+const Gdawg=sequelize.define('Gdawg',{
     id: {
         type: DataTypes.INTEGER,
         primaryKey:true,
@@ -24,10 +24,6 @@ const Gdawg=sequelize.define("GDAWG", {
 }, {
     tableName: "GDAWGS"
 })
+Gdawg.sync();
 
-async ()=>{
-    await sequelize.sync({alter:true}).then(()=>{
-        console.log(Gdawg.findAll())
-    })
-}
 module.exports={Gdawg}
